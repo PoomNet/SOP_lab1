@@ -1,10 +1,9 @@
 package maven.web.lab01;
 
 public class Huawei extends Mobile{
-	public Huawei() {
-		setId(3);
-		setBrand("huawei");
-		setModel("nova 5T");
-		setPrice(14999);
+
+	public Huawei(int id, String brand, String model, int price) {
+		super(id, brand, model, price);
+		// TODO Auto-generated constructor stub
 	}
 }

@@ -5,12 +5,12 @@ abstract class Mobile {
     private String brand;
     private String model;
     private int    price;
-//    public Mobile(String id, String brand,String model, int price){
-//        this.id = id;
-//        this.brand = brand;
-//        this.model = model;
-//        this.price = price;
-//    }
+    public Mobile(int id, String brand,String model, int price){
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+    }
 	public int getId() {
 		return id;
 	}
@@ -34,5 +34,8 @@ abstract class Mobile {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	public String buyMobile() {
+		return "Your purchase successfully";
 	}
 }

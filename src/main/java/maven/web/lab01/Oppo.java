@@ -1,10 +1,10 @@
 package maven.web.lab01;
 
 public class Oppo extends Mobile {
-	public Oppo() {
-		setId(4);
-		setBrand("oppo");
-		setModel("Reno2");
-		setPrice(12899);
+
+	public Oppo(int id, String brand, String model, int price) {
+		super(id, brand, model, price);
+		// TODO Auto-generated constructor stub
 	}
+
 }

@@ -1,11 +1,11 @@
 package maven.web.lab01;
 
 public class Apple extends Mobile {
-	public Apple() {
-		setId(1);
-		setBrand("apple");
-		setModel("iphone11");
-		setPrice(28999);
+
+	public Apple(int id, String brand, String model, int price) {
+		super(id, brand, model, price);
+		// TODO Auto-generated constructor stub
 	}
+	
 
 }

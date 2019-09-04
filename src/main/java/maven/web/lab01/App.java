@@ -16,6 +16,6 @@ public class App {
 	}
 	@RequestMapping("/") 
 		String home() { 
-		return "mobile"; 
+		return "Mobile Shop"; 
 	}
 }
