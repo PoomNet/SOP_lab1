@@ -37,24 +37,19 @@ public class MobileController {
 	public List<Mobile> All(){
 	return Mlist;
 }
-@RequestMapping("/mobile/{id}")
-public Mobile MList(@PathVariable int id){
-	for(int i = 0;i<Mlist.size();i++) {
-		if(id>Mlist.size()) {
-			return null;
-		}
-		else if(Mlist.get(i)==Mlist.get(id-1)) {
-			return Mlist.get(id-1);
-		}
-		
-	}
-    return null;
-}
+
 @RequestMapping("/buymobile/{id}")
 public String BuyM(@PathVariable Long id){
 	Mobile mob = new Mobile(mobres.getOne(id).getId() , mobres.getOne(id).getBrand(),mobres.getOne(id).getModel(),mobres.getOne(id).getPrice(),mobres.getOne(id).getStock()-1);
 	mobres.save(mob);
 	return "buy success";
+}
+
+@RequestMapping("/mobile/{id}")
+public Mobile MList(@PathVariable int id){
+	List<Mobile> a = new ArrayList(Arrays.asList());
+	a=mobres.findAll();
+	return a.get(id-1);
 }
 
 @GetMapping(value = "/mobileall")
