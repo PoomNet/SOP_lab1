@@ -2,8 +2,8 @@ package maven.web.lab01;
 
 public class Apple extends Mobile {
 
-	public Apple(int id, String brand, String model, int price) {
-		super(id, brand, model, price);
+	public Apple(Long id, String brand, String model, int price,int stock) {
+		super(id, brand, model, price,stock);
 		// TODO Auto-generated constructor stub
 	}
 	
